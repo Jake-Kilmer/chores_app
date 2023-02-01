@@ -1,0 +1,40 @@
+//CHORES APP DB tables
+
+
+
+//USERS
+
+create table users (
+  id int unsigned not null primary key auto_increment,
+  obfuscatedId char(16) not null,
+  created datetime null,
+  updated timestamp null,
+  lastLogin datetime null,
+  email varchar(252) not null,
+  username varchar(128) not null,
+  passwordHash char(255) null,
+  forcePasswordChange boolean default true,
+  isEnabled boolean default true,
+  isDeleted boolean default false,
+  administrator boolean default false
+) engine=innodb default charset=latin1;
+
+
+
+//CHORELISTS
+
+create table choreLists (
+  id int unsigned not null primary key auto_increment,
+  userId int unsigned not null,
+  listName varchar(252) not null
+) engine=innodb default charset=latin1;
+
+
+
+//CHOREITEMS
+
+create table choreItems (
+  id int unsigned not null primary key auto_increment,
+  choreListId int unsigned not null,
+  chore varchar(252) not null
+) engine=innodb default charset=latin1;
