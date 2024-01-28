@@ -548,7 +548,7 @@ $site_title = "Chores App";
 
 			static public function footer() {
 		?>
-		<p class="footerDisclaimer">Chores App 1.4 built by <a href="https://www.jakekilmer.com" target="_blank">Kilmer</a> &#169; 2023</p>
+		<p class="footerDisclaimer">Chores App 1.4 built by <a href="https://www.jakekilmer.com" target="_blank">Kilmer</a> &#169; <?php echo date("Y"); ?></p>
 		</div>
 	</main>
 </body>

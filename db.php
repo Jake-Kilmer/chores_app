@@ -61,7 +61,7 @@ class db {
 
 				// if the value is an integer, we have to specify that to PDO via PDO::PARAM_INT
 				if (is_int($v)==true) {
-					$prep->bindValue($k, $v, PDO::PARAM_INT);
+					$prep->bindValue($k, $v, \PDO::PARAM_INT);
 				} else {
 					$filter = $this->xssFilter($v);
 					$prep->bindValue($k, $filter);

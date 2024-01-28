@@ -20,7 +20,7 @@ class Indexviews {
 					<h1 class="animate"><?php echo $site_title; ?></h1>
 	<?php }
 	static public function footer() { ?>
-	        <p class="footerDisclaimer">Chores App 1.4 built by <a href="https://www.jakekilmer.com" target="_blank">Kilmer</a> &#169; 2023</p>
+	        <p class="footerDisclaimer">Chores App 1.4 built by <a href="https://www.jakekilmer.com" target="_blank">Kilmer</a> &#169; <?php echo date("Y"); ?></p>
 			</main>
 			<script src="js/script.js?t=<?php echo time(); ?>" /></script>
 		</body>
