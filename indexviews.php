@@ -127,7 +127,7 @@ class Indexviews {
 	static public function indexSignup($error="") {
 		 	Indexviews::header();
 		?>
-		<h2 class="h2CTA">A simple list to add / remove daily chores</h2>
+		<h2 class="h2CTA">A simple list to add and remove daily chores</h2>
 		<form class="login_form" action="index.php" method="post">
 
 			<input type="hidden" name="csrf" value="<?= $_SESSION["csrf"] ?>">
